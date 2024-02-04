@@ -22,7 +22,7 @@ forge script script/1_DeploySource.s.sol --rpc-url avalanche_fuji  --broadcast
     -    SourceMinter - `0x232B510Ea4105ed6B036677c82cfC65d9D209792`
 
 2. Deploy to destination chain `DestinationMinter.sol` and `MyNFT.sol`
-    - Deploy the script `2_DeployDestinationMinterAndNFT.s.sol` using the command below 
+    - Deploy the script `2_DeployDestinationMinterAndNFT.s.sol` using the command below and after command `fund the address of contract with some native tokens` using metamask, etc
 ```bash
 forge script script/2_DeployDestinationMinterAndNFT.s.sol --rpc-url mumbai  --broadcast
 ```
@@ -37,9 +37,9 @@ forge script script/3_MintNFtUsingSource.s.sol --rpc-url avalanche_fuji  --broad
 ```
 
 4. After Above steps check with tx hash on [CCIP explorer](https://ccip.chain.link)
-    - Here is my tx-hash for above steps : [Cross-Chain NFT Transfer](https://ccip.chain.link/msg/0xfeab8bddf6e85bf45580b6b64edb887e3025688b5f697a41f34c0926dc657414)
+    - Here is my tx-hash for above steps, if done correctly the nft should show up on destination after settlement: [Cross-Chain NFT Transfer](https://ccip.chain.link/msg/0xfeab8bddf6e85bf45580b6b64edb887e3025688b5f697a41f34c0926dc657414)
     - Here is the nft minted on mumbai from avalanche fuji : [Minted](https://mumbai.polygonscan.com/token/0x62fbdba31e2a3d1ee6d21f05ce39375ea4f4d523)
-
+    - Here is the nft listed on opensea : [Opensea testnet](https://testnets.opensea.io/assets/mumbai/0x62fbdba31e2a3d1ee6d21f05ce39375ea4f4d523/0)
 
 
 ## Foundry
